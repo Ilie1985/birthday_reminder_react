@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import List from "./component/List";
+import data from "./data/data";
 
 const App = () => {
-  const [clearAll, setClearAll] = useState(true);
-
-  const clearHandler = () => {
-    setClearAll(clearAll.length - clearAll.length);
-  };
+  const [people, setPeople] = useState(data);
 
   return (
     <main>
       <section className="container">
-        <h4>5 birthdays today</h4>
+        <h4>{people.length} birthdays today</h4>
 
-        <List />
-        <button onClick={clearHandler}>Clear All</button>
+        <List people={people} />
+        <button
+          onClick={() => {
+            setPeople([]);
+          }}
+        >
+          Clear All
+        </button>
       </section>
     </main>
   );

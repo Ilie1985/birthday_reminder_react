@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import data from "../data/data";
 
-const List = (props) => {
-  const people = data;
+
+const List = ({people}) => {
+ 
   return (
     <Fragment>
       {people.map((person) => {
