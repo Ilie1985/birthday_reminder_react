@@ -1,9 +1,11 @@
 import React from "react"
+import data from "./data/data";
+import List from "./component/List";
 
-function App() {
+const App=()=> {
   return (
     <div className="App">
-    
+    <List/>
     </div>
   );
 }
