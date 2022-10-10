@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
+import data from "../data/data";
 
-const List = ({ people }) => {
+const List = (props) => {
+  const people = data;
   return (
     <Fragment>
       {people.map((person) => {
@@ -12,6 +14,7 @@ const List = ({ people }) => {
               <h4>{name}</h4>
               <p>{age} years</p>
             </div>
+              
           </article>
         );
       })}
