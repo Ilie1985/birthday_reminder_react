@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 
 
-const List = ({people}) => {
+const List = (props) => {
  
   return (
     <Fragment>
-      {people.map((person) => {
+      {props.people.map((person) => {
         const { id, name, age, image } = person;
         return (
           <article key={id} className="person">
